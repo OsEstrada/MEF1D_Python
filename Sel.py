@@ -1,5 +1,5 @@
 from Classes import *
-from Enums import *
+from Dictionaries import *
 from matrix_math import *
 from array import array
 

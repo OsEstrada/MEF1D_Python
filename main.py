@@ -1,7 +1,7 @@
 from Classes import *
 from Sel import *
 from readfile import *
-from Enums import *
+from Dictionaries import *
 
 localKs = []
 localbs = []

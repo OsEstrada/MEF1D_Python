@@ -1,4 +1,4 @@
-from Enums import *
+from Dictionaries import *
 from abc import abstractmethod
 
 
@@ -102,8 +102,6 @@ class mesh():
             self.__dirichlet_list.append(condition())
         for i in range(self.__sizes[SIZES['NEUMANN']]):
             self.__neumman_list.append(condition())
-        #print(len(self.__node_list))
-        #print(len(self.__element_list))
 
     def getNodes(self):
         return self.__node_list
