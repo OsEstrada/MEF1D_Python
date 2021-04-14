@@ -12,20 +12,20 @@ class item():
     def __init__(self):
         pass
 
-        def getId(self):
-            return self._id
+    def getId(self):
+        return self._id
 
-        def getX(self):
-            return self._x
+    def getX(self):
+        return self._x
 
-        def getNode1(self):
-            return self._node1
+    def getNode1(self):
+        return self._node1
 
-        def getNode2(self):
-            return self._node2
+    def getNode2(self):
+        return self._node2
 
-        def getValue(self):
-            return self._value
+    def getValue(self):
+        return self._value
 
     @abstractmethod
     def setIntFloat(self, n, r):
@@ -91,6 +91,19 @@ class mesh():
         self.__sizes.insert(SIZES['ELEMENTS'], neltos)
         self.__sizes.insert(SIZES['DIRICHLET'], ndirich)
         self.__sizes.insert(SIZES['NEUMANN'], nneu)
+        #print(self.__sizes, " sizes")
+
+    def createData(self):
+        for i in range(self.__sizes[SIZES['NODES']]):
+            self.__node_list.append(node())
+        for i in range(self.__sizes[SIZES['ELEMENTS']]):
+            self.__element_list.append(element())
+        for i in range(self.__sizes[SIZES['DIRICHLET']]):
+            self.__dirichlet_list.append(condition())
+        for i in range(self.__sizes[SIZES['NEUMANN']]):
+            self.__neumman_list.append(condition())
+        #print(len(self.__node_list))
+        #print(len(self.__element_list))
 
     def getNodes(self):
         return self.__node_list
@@ -115,6 +128,3 @@ class mesh():
             return self.__dirichlet_list[i]
         else:
             return self.__neumman_list[i]
-
-
-emp = mesh()
