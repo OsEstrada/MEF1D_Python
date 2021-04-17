@@ -1,6 +1,9 @@
 from Classes import *
 import os
 
+#Toda esta clase se encarga de leer los datos de un archivo de texto y almacenarlos en los
+# objetos que se estaran utilizando
+
 def obtenerDatos(file, nlines, n, mode, item_list):
     x = file.readline()
     if nlines == LINES['DOUBLELINE']:

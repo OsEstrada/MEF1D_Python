@@ -20,7 +20,7 @@ def showKs(Ks):
     for i in range(n):
         print("K del elemento ",i+1,":")
         showMatrix(Ks[i])
-        print("********************************")
+        print("-------------------------------")
     print("")
 
 #Esta funcion se encarga de mostrar las bs locales
@@ -29,7 +29,7 @@ def showbs(bs):
     for i in range(n):
         print("b del elemento",i+1)
         showArray(bs[i])
-        print("*******************************")
+        print("-------------------------------")
     print("")
 
 #Esta funcion muestra los valores de una lista o arreglo con un formato especifico
