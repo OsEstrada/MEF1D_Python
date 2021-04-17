@@ -1,6 +1,6 @@
 from Classes import *
 from Dictionaries import *
-from matrix_math import *
+from Matrix_math import *
 from array import array
 
 #Esta funcion muestra la matriz
