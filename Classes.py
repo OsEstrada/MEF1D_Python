@@ -1,6 +1,4 @@
 from Dictionaries import *
-from abc import abstractmethod
-
 
 class item():
     _id = 0
@@ -27,28 +25,14 @@ class item():
     def getValue(self):
         return self._value
 
-    @abstractmethod
-    def setIntFloat(self, n, r):
-        pass
-
-    @abstractmethod
-    def setIntIntInt(self, n1, n2, n3):
-        pass
-
 
 class node(item):
     def setIntFloat(self, identifier, x_coordinate):
         self._id = identifier
         self._x = x_coordinate
 
-    def setIntIntInt(self, n1, n2, n3):
-        pass
-
 
 class element(item):
-    def setIntFloat(self, n, r):
-        pass
-
     def setIntIntInt(self, identifier, firstnode, secondnode):
         self._node1 = firstnode
         self._node2 = secondnode
@@ -59,9 +43,6 @@ class condition(item):
     def setIntFloat(self, node_to_apply, prescribed_value):
         self._node1 = node_to_apply
         self._value = prescribed_value
-
-    def setIntIntInt(self, n1, n2, n3):
-        pass
 
 
 class mesh():
@@ -91,7 +72,6 @@ class mesh():
         self.__sizes.insert(SIZES['ELEMENTS'], neltos)
         self.__sizes.insert(SIZES['DIRICHLET'], ndirich)
         self.__sizes.insert(SIZES['NEUMANN'], nneu)
-        #print(self.__sizes, " sizes")
 
     def createData(self):
         for i in range(self.__sizes[SIZES['NODES']]):

@@ -16,7 +16,7 @@ m = mesh()
 leerMalla(m)
 
 crearSistemasLocales(m, localKs, localbs)
-# showKs(localKs); showbs(localbs)
+showKs(localKs); showbs(localbs)
 
 zeroes(K, m.getSize(SIZES['NODES']))
 arrayZeroes(b, m.getSize(SIZES['NODES']))
