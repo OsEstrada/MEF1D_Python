@@ -3,6 +3,8 @@ from Sel import *
 from readfile import *
 from Dictionaries import *
 
+#NOTA: Todo este programa esta diseñado para funcionar en 1d y con una malla regular, de modo que el valor de l es introducido en el archivo
+
 #Se instancias las listas/Matrices a utilizar
 localKs = []
 localbs = []
