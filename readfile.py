@@ -6,6 +6,7 @@ import os
 
 def obtenerDatos(file, nlines, n, mode, item_list):
     x = file.readline()
+    x = file.readline()
     if nlines == LINES['DOUBLELINE']:
         x = file.readline()
     for i in range(n):

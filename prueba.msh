@@ -1,5 +1,6 @@
 0.3 0.5 5
 10 9 1 1
+
 Coordinates
 1   0.3
 2   0.6
@@ -12,6 +13,7 @@ Coordinates
 9   2.7
 10  3.0
 EndCoordinates
+
 Elements
 1 1 2
 2 2 3
@@ -23,9 +25,11 @@ Elements
 8 8 9
 9 9 10
 EndElements
+
 Dirichlet
 1 15
 EndDirichlet
+
 Neumann
 10 8
 EndNeumann
